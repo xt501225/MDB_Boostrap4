@@ -11,5 +11,10 @@ header {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: calc(100% - 100px);
+    height: calc(100%);
+}
+
+.top-nav-collapse
+{
+    background-color: #24355C;
 }
