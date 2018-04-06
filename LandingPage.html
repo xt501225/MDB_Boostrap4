@@ -672,10 +672,8 @@
           var index=this.title;
           var id='#'+index;
           var height = $('#navBar').outerHeight();
-          alert(height);
           var offset = $(id).position().top > height ? $(id).position().top - height : $(id).position().top;
           $('html,body').animate({scrollTop: offset}, 1000);
-
       });
     });
 
