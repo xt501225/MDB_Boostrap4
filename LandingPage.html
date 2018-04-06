@@ -18,7 +18,7 @@
 
 <header>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar top-nav-collapse ">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar top-nav-collapse" id="navBar">
         <div class="container">
 
             <!-- Navbar brand -->
@@ -671,7 +671,10 @@
       $('.nav-item a').click(function () {
           var index=this.title;
           var id='#'+index;
-          $('html,body').animate({scrollTop: $(id).position().top}, 1000);
+          var height = $('#navBar').outerHeight();
+          alert(height);
+          var offset = $(id).position().top > height ? $(id).position().top - height : $(id).position().top;
+          $('html,body').animate({scrollTop: offset}, 1000);
 
       });
     });
